@@ -1,0 +1,57 @@
+* {  /*O seletor * é universal e se aplica a todos os elementos da página (exceto quando um seletor de elemento mais específico o substitui).*/
+    color: var(--fontColor);
+    font-family: helvetica;
+}
+
+body {
+    background: var(--bg);
+}
+:root{  /*raiz da página do arquivo CSS, o seletor :root representa o elemento da <html> da página HTML*/
+    --green: #00ff00; /*Variáveis globais*/
+    --white: #ffff;
+    --black: #000;
+}
+ul {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+li{
+    list-style: circle;
+}
+
+.list{
+    list-style: square;
+}
+
+/*
+#msg {
+    font-family: monospace;
+}
+*/
+
+.ligth-theme {
+    --bg: var(--green);
+    --fontColor: var(--black);
+    --btnbg: var(--black);
+    --btnfontColor: var(--white);
+}
+
+.dark-theme {
+    --bg: var(--black);
+    --fontColor: var(--green);
+    --btnbg: var(--white);
+    --btnfontColor: var(--black);
+}
+
+.btn{
+    position: absolute;
+    top: 20px;
+    left: 250px;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    border: none;
+    color: var(--btnfontColor);
+    background: var(--btnbg);
+}
+.btn:focus { outline-style: none;} /*Para melhorar a aparência do botão, adicione um seletor de pseudoclasse, btn:focus, após o seletor de botão. Ao definir a regra de outline-style como none, você elimina um contorno retangular quando o botão é selecionado (recebe foco)*/
